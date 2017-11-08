@@ -1,0 +1,14 @@
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll.config
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.pdb
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.pdb
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.pdb
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.xml
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
+c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb
