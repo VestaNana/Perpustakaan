@@ -8,3 +8,8 @@ C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanV
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb

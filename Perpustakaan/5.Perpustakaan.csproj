@@ -118,10 +118,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AnggotaController.cs" />
+    <Compile Include="Controllers\BukuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PemasokController.cs" />
     <Compile Include="Controllers\PendaftaranController.cs" />
     <Compile Include="Controllers\PenerbitController.cs" />
+    <Compile Include="Controllers\PetugasController.cs" />
     <Compile Include="Extensions\ClaimsExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1029,6 +1031,18 @@
     <Content Include="Views\Penerbit\Edit.cshtml" />
     <Content Include="Views\Penerbit\Delete.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Anggota\GetByPendaftaran.cshtml" />
+    <Content Include="Views\Petugas\Create.cshtml" />
+    <Content Include="Views\Petugas\Delete.cshtml" />
+    <Content Include="Views\Petugas\Edit.cshtml" />
+    <Content Include="Views\Petugas\Index.cshtml" />
+    <Content Include="Views\Petugas\List.cshtml" />
+    <Content Include="Views\Buku\Create.cshtml" />
+    <Content Include="Views\Buku\Delete.cshtml" />
+    <Content Include="Views\Buku\Edit.cshtml" />
+    <Content Include="Views\Buku\GetByPenerbit.cshtml" />
+    <Content Include="Views\Buku\Index.cshtml" />
+    <Content Include="Views\Buku\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

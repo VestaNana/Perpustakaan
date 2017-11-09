@@ -39,6 +39,36 @@ namespace PerpustakaanDataAccess
 
             return result;
         }
+
+        public static List<BukuViewModel> GetByPenerbit(string kodePenerbit)
+        {
+            List<BukuViewModel> result = new List<BukuViewModel>();
+
+            using (var db = new PerpusContext())
+            {
+                result = (from bk in db.Buku
+                          join pnt in db.Penerbit
+                          on bk.KodePenerbit equals pnt.KodePenerbit
+                          select new BukuViewModel
+                          {
+                              Id = bk.Id,
+                              KodeBuku = bk.KodeBuku,
+                              Kategori = bk.Kategori,
+                              KodePenerbit = bk.KodePenerbit,
+                              JudulBuku = bk.JudulBuku,
+                              jumlahBuku = bk.jumlahBuku,
+                              Pengarang = bk.Pengarang,
+                              TahunTerbit = bk.TahunTerbit
+                              //CreatedBy = bk.CreatedBy,
+                              //Created = bk.Created,
+                              //ModifiedBy = bk.ModifiedBy,
+                              //Modified = bk.Modified
+                          }).ToList();
+            }
+
+            return result;
+        }
+
         public static bool Update(BukuViewModel model)
         {
             bool result = true;

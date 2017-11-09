@@ -40,3 +40,17 @@ D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.Sql
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll.config
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.xml
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb

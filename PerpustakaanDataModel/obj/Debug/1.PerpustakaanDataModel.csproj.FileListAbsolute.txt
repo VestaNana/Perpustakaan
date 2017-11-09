@@ -18,3 +18,13 @@ D:\Mini-Proyek\Perpustakaan\PerpustakaanDataModel\bin\Debug\EntityFramework.SqlS
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataModel\obj\Debug\1.PerpustakaanDataModel.csprojResolveAssemblyReference.cache
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataModel\obj\Debug\PerpustakaanDataModel.dll
 D:\Mini-Proyek\Perpustakaan\PerpustakaanDataModel\obj\Debug\PerpustakaanDataModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\PerpustakaanDataModel.dll.config
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\PerpustakaanDataModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\PerpustakaanDataModel.pdb
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\EntityFramework.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\EntityFramework.xml
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\obj\Debug\1.PerpustakaanDataModel.csprojResolveAssemblyReference.cache
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\obj\Debug\PerpustakaanDataModel.dll
+F:\PerpustakaanMP\Perpustakaan\PerpustakaanDataModel\obj\Debug\PerpustakaanDataModel.pdb

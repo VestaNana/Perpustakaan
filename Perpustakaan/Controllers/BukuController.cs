@@ -15,13 +15,17 @@ namespace Perpustakaan.Controllers
         {
             return View();
         }
+        public ActionResult GetByPenerbit(string kodePenerbit)
+        {
+            return View(BukuDataAccess.GetByPenerbit(kodePenerbit));
+        }
         public ActionResult List()
         {
             return View(BukuDataAccess.GetAll());
         }
         public ActionResult Create()
         {
-            //ViewBag.DivisionList = new SelectList(DivisionDataAccess.GetAll(), "Code", "Description");
+            ViewBag.PenerbitList = new SelectList(PenerbitDataAccess.GetAll(), "KodePenerbit", "KodePenerbit");
             return View();
         }
 
@@ -65,7 +69,7 @@ namespace Perpustakaan.Controllers
         }
         public ActionResult Edit(int id)
         {
-            //ViewBag.DivisionList = new SelectList(DivisionDataAccess.GetAll(), "Code", "Description");
+            ViewBag.PenerbitList = new SelectList(PenerbitDataAccess.GetAll(), "KodePenerbit", "KodePenerbit");
             return View(BukuDataAccess.GetById(id));
         }
 

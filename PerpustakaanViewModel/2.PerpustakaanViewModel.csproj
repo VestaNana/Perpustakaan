@@ -45,6 +45,7 @@
     <Compile Include="PemasokViewModel.cs" />
     <Compile Include="PendaftaranViewModel.cs" />
     <Compile Include="PenerbitViewModel.cs" />
+    <Compile Include="PetugasViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
