@@ -26,3 +26,17 @@ C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanD
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
 C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll.config
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.xml
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb
