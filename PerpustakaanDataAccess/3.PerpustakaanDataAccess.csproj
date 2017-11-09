@@ -49,7 +49,6 @@
     <Compile Include="AnggotaDataAccess.cs" />
     <Compile Include="BukuDataAccess.cs" />
     <Compile Include="PemasokDataAccess.cs" />
-    <Compile Include="PendaftaranDataAccess.cs" />
     <Compile Include="PenerbitDataAccess.cs" />
     <Compile Include="PetugasDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

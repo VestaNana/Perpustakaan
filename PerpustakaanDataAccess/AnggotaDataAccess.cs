@@ -17,8 +17,8 @@ namespace PerpustakaanDataAccess
             using (var db = new PerpusContext())
             {
                 result = (from ag in db.Anggota
-                           join pdf in db.Pendaftaran
-                           on ag.KodeAnggota equals pdf.KodeKartu
+                           //join pdf in db.Pendaftaran
+                           //on ag.KodeAnggota equals pdf.KodeKartu
                           select new AnggotaViewModel
                           {
                               Id = ag.Id,
@@ -43,8 +43,8 @@ namespace PerpustakaanDataAccess
             using (var db = new PerpusContext())
             {
                 result = (from ag in db.Anggota
-                          join pdf in db.Pendaftaran
-                          on ag.KodeAnggota equals pdf.KodeKartu
+                          //join pdf in db.Pendaftaran
+                          //on ag.KodeAnggota equals pdf.KodeKartu
                           select new AnggotaViewModel
                           {
                               Id = ag.Id,

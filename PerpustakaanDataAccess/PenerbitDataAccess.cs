@@ -23,7 +23,6 @@ namespace PerpustakaanDataAccess
                               Id = pnb.Id,
                               KodePenerbit = pnb.KodePenerbit,
                               NamaPenerbit = pnb.NamaPenerbit,
-                              NamaPengarang = pnb.NamaPengarang,
                               AlamatPenerbit = pnb.AlamatPenerbit,
                               Telepon= pnb.Telepon
                           }).ToList();
@@ -41,11 +40,10 @@ namespace PerpustakaanDataAccess
                     if (model.Id == 0)
                     {
                         Penerbit pnb = new Penerbit();
-                        pnb.Id = model.Id;
-                        pnb.KodePenerbit = model.KodePenerbit;
-                        pnb.NamaPenerbit = model.NamaPenerbit;
-                        pnb.NamaPengarang = model.NamaPengarang;
-                        pnb.AlamatPenerbit = model.AlamatPenerbit;
+                        pnb.Id=model.Id ;
+                        pnb.KodePenerbit=model.KodePenerbit;
+                        pnb.NamaPenerbit=model.NamaPenerbit;
+                        pnb.AlamatPenerbit=model.AlamatPenerbit;
                         pnb.Telepon = model.Telepon;
                         pnb.CreatedBy = "Admin";
                         pnb.Created = DateTime.Now;
@@ -59,7 +57,6 @@ namespace PerpustakaanDataAccess
                         {
                             pnb.KodePenerbit = model.KodePenerbit;
                             pnb.NamaPenerbit = model.NamaPenerbit;
-                            pnb.NamaPengarang = model.NamaPengarang;
                             pnb.AlamatPenerbit = model.AlamatPenerbit;
                             pnb.Telepon = model.Telepon;
                             pnb.ModifiedBy = "Admin";
@@ -89,9 +86,8 @@ namespace PerpustakaanDataAccess
                             Id = pnb.Id,
                             KodePenerbit = pnb.KodePenerbit,
                             NamaPenerbit = pnb.NamaPenerbit,
-                            NamaPengarang = pnb.NamaPengarang,
                             AlamatPenerbit = pnb.AlamatPenerbit,
-                            Telepon=pnb.Telepon
+                            Telepon = pnb.Telepon
                         }).FirstOrDefault();
             }
             return result;

@@ -10,11 +10,9 @@ namespace PerpustakaanDataModel
     {
         public Petugas()
         {
-            DonasiBuku = new HashSet<DonasiBuku>();
+            Anggota = new HashSet<Anggota>();
             Pembelian = new HashSet<Pembelian>();
             Peminjaman = new HashSet<Peminjaman>();
-            Pendaftaran = new HashSet<Pendaftaran>();
-            Pengembalian = new HashSet<Pengembalian>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -38,14 +36,10 @@ namespace PerpustakaanDataModel
 
         public DateTime? Modified { get; set; }
 
-        public virtual ICollection<DonasiBuku> DonasiBuku { get; set; }
+        public virtual ICollection<Anggota> Anggota { get; set; }
 
         public virtual ICollection<Pembelian> Pembelian { get; set; }
 
         public virtual ICollection<Peminjaman> Peminjaman { get; set; }
-
-        public virtual ICollection<Pendaftaran> Pendaftaran { get; set; }
-
-        public virtual ICollection<Pengembalian> Pengembalian { get; set; }
     }
 }

@@ -9,20 +9,7 @@ namespace PerpustakaanDataModel
     [Table("DonasiBuku")]
     public partial class DonasiBuku
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [Key]
-        [StringLength(10)]
-        public string KodeDonasi { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string NamaPenerbit { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string NamaDonatur { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -30,7 +17,7 @@ namespace PerpustakaanDataModel
 
         [Required]
         [StringLength(50)]
-        public string NamaPetugas { get; set; }
+        public string NamaDonatur { get; set; }
 
         public DateTime TglDonasi { get; set; }
 
@@ -44,6 +31,6 @@ namespace PerpustakaanDataModel
 
         public DateTime? Modified { get; set; }
 
-        public virtual Petugas Petugas { get; set; }
+        public virtual DetailDonasiBuku DetailDonasiBuku { get; set; }
     }
 }

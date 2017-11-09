@@ -12,13 +12,11 @@ namespace PerpustakaanViewModel
     {
         public int Id { get; set; }
 
-        public string KodePemasok { get; set; }
-
-        public string KodePembelian { get; set; }
-
         public string KodePenerbit { get; set; }
 
-        public string NamaPenerbit { get; set; }
+        public string KodePemasok { get; set; }
+
+        public string NamaPemasok { get; set; }
 
         public string AlamatPemasok { get; set; }
 

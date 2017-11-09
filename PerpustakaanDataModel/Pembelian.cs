@@ -12,29 +12,21 @@ namespace PerpustakaanDataModel
         public int Id { get; set; }
 
         [Required]
-        [StringLength(10)]
-        public string NoReferensi { get; set; }
-
-        [Required]
         [StringLength(20)]
         public string KodePemasok { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string NamaPemasok { get; set; }
 
         [Required]
         [StringLength(10)]
         public string KodePetugas { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string NamaPetugas { get; set; }
-
         public DateTime TglPembelian { get; set; }
 
         [Column(TypeName = "money")]
         public decimal HargaBuku { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string NoReferensi { get; set; }
 
         [StringLength(50)]
         public string CreatedBy { get; set; }

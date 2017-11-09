@@ -11,18 +11,16 @@ namespace PerpustakaanViewModel
     {
         public int Id { get; set; }
 
+        public string KodePetugas { get; set; }
+
         public string KodeAnggota { get; set; }
 
-        [Required]
         public string Nama { get; set; }
 
-        [Required]
         public string Alamat { get; set; }
 
-        [Required]
         public string Email { get; set; }
 
-        [Required]
         public string Telepon { get; set; }
 
         public string CreatedBy { get; set; }

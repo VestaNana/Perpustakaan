@@ -14,19 +14,24 @@ namespace PerpustakaanDataModel
 
         public virtual DbSet<Anggota> Anggota { get; set; }
         public virtual DbSet<Buku> Buku { get; set; }
+        public virtual DbSet<DetailDonasiBuku> DetailDonasiBuku { get; set; }
         public virtual DbSet<DetailPembelian> DetailPembelian { get; set; }
         public virtual DbSet<DetailPeminjaman> DetailPeminjaman { get; set; }
+        public virtual DbSet<DetailPengembalian> DetailPengembalian { get; set; }
         public virtual DbSet<DonasiBuku> DonasiBuku { get; set; }
         public virtual DbSet<Pemasok> Pemasok { get; set; }
         public virtual DbSet<Pembelian> Pembelian { get; set; }
         public virtual DbSet<Peminjaman> Peminjaman { get; set; }
-        public virtual DbSet<Pendaftaran> Pendaftaran { get; set; }
         public virtual DbSet<Penerbit> Penerbit { get; set; }
         public virtual DbSet<Pengembalian> Pengembalian { get; set; }
         public virtual DbSet<Petugas> Petugas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Anggota>()
+                .Property(e => e.KodePetugas)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Anggota>()
                 .Property(e => e.KodeAnggota)
                 .IsUnicode(false);
@@ -54,16 +59,6 @@ namespace PerpustakaanDataModel
             modelBuilder.Entity<Anggota>()
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Anggota>()
-                .HasMany(e => e.Peminjaman)
-                .WithRequired(e => e.Anggota)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Anggota>()
-                .HasMany(e => e.Pengembalian)
-                .WithRequired(e => e.Anggota)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Buku>()
                 .Property(e => e.KodeBuku)
@@ -94,9 +89,13 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Buku>()
+                .HasMany(e => e.DetailDonasiBuku)
+                .WithRequired(e => e.Buku)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Buku>()
                 .HasMany(e => e.DetailPembelian)
                 .WithRequired(e => e.Buku)
-                .HasForeignKey(e => e.Kode)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Buku>()
@@ -109,8 +108,44 @@ namespace PerpustakaanDataModel
                 .WithRequired(e => e.Buku)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<DetailDonasiBuku>()
+                .Property(e => e.Kategori)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailDonasiBuku>()
+                .Property(e => e.KodePenerbit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailDonasiBuku>()
+                .Property(e => e.KodeBuku)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailDonasiBuku>()
+                .Property(e => e.JudulBuku)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailDonasiBuku>()
+                .Property(e => e.NamaPengarang)
+                .IsUnicode(false);
+
             modelBuilder.Entity<DetailPembelian>()
-                .Property(e => e.Kode)
+                .Property(e => e.KodePenerbit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailPembelian>()
+                .Property(e => e.KodeBuku)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailPembelian>()
+                .Property(e => e.JudulBuku)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailPembelian>()
+                .Property(e => e.NamaPengarang)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailPembelian>()
+                .Property(e => e.Kategori)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DetailPembelian>()
@@ -142,14 +177,6 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<DetailPeminjaman>()
-                .Property(e => e.Nama)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DetailPeminjaman>()
-                .Property(e => e.JudulBuku)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DetailPeminjaman>()
                 .Property(e => e.CreatedBy)
                 .IsUnicode(false);
 
@@ -157,12 +184,21 @@ namespace PerpustakaanDataModel
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<DonasiBuku>()
-                .Property(e => e.KodeDonasi)
+            modelBuilder.Entity<DetailPengembalian>()
+                .Property(e => e.JudulBuku)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<DetailPengembalian>()
+                .Property(e => e.NamaPengarang)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DetailPengembalian>()
+                .HasMany(e => e.Pengembalian)
+                .WithRequired(e => e.DetailPengembalian)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<DonasiBuku>()
-                .Property(e => e.NamaPenerbit)
+                .Property(e => e.KodePetugas)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DonasiBuku>()
@@ -170,14 +206,6 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<DonasiBuku>()
-                .Property(e => e.KodePetugas)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DonasiBuku>()
-                .Property(e => e.NamaPetugas)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DonasiBuku>()
                 .Property(e => e.CreatedBy)
                 .IsUnicode(false);
 
@@ -185,20 +213,20 @@ namespace PerpustakaanDataModel
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Pemasok>()
-                .Property(e => e.KodePemasok)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pemasok>()
-                .Property(e => e.KodePembelian)
-                .IsUnicode(false);
+            modelBuilder.Entity<DonasiBuku>()
+                .HasOptional(e => e.DetailDonasiBuku)
+                .WithRequired(e => e.DonasiBuku);
 
             modelBuilder.Entity<Pemasok>()
                 .Property(e => e.KodePenerbit)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Pemasok>()
-                .Property(e => e.NamaPenerbit)
+                .Property(e => e.KodePemasok)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Pemasok>()
+                .Property(e => e.NamaPemasok)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Pemasok>()
@@ -223,15 +251,7 @@ namespace PerpustakaanDataModel
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Pembelian>()
-                .Property(e => e.NoReferensi)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pembelian>()
                 .Property(e => e.KodePemasok)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pembelian>()
-                .Property(e => e.NamaPemasok)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Pembelian>()
@@ -239,12 +259,12 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Pembelian>()
-                .Property(e => e.NamaPetugas)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pembelian>()
                 .Property(e => e.HargaBuku)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<Pembelian>()
+                .Property(e => e.NoReferensi)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Pembelian>()
                 .Property(e => e.CreatedBy)
@@ -279,36 +299,12 @@ namespace PerpustakaanDataModel
                 .WithRequired(e => e.Peminjaman)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Pendaftaran>()
-                .Property(e => e.KodeKartu)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pendaftaran>()
-                .Property(e => e.KodePetugas)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pendaftaran>()
-                .Property(e => e.CreatedBy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pendaftaran>()
-                .Property(e => e.ModifiedBy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Pendaftaran>()
-                .HasOptional(e => e.Anggota)
-                .WithRequired(e => e.Pendaftaran);
-
             modelBuilder.Entity<Penerbit>()
                 .Property(e => e.KodePenerbit)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Penerbit>()
                 .Property(e => e.NamaPenerbit)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Penerbit>()
-                .Property(e => e.NamaPengarang)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Penerbit>()
@@ -349,8 +345,8 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Pengembalian>()
-                .Property(e => e.JudulBuku)
-                .IsUnicode(false);
+                .Property(e => e.TglPengembalian)
+                .IsFixedLength();
 
             modelBuilder.Entity<Pengembalian>()
                 .Property(e => e.Denda)
@@ -381,7 +377,7 @@ namespace PerpustakaanDataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Petugas>()
-                .HasMany(e => e.DonasiBuku)
+                .HasMany(e => e.Anggota)
                 .WithRequired(e => e.Petugas)
                 .WillCascadeOnDelete(false);
 
@@ -392,16 +388,6 @@ namespace PerpustakaanDataModel
 
             modelBuilder.Entity<Petugas>()
                 .HasMany(e => e.Peminjaman)
-                .WithRequired(e => e.Petugas)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Petugas>()
-                .HasMany(e => e.Pendaftaran)
-                .WithRequired(e => e.Petugas)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Petugas>()
-                .HasMany(e => e.Pengembalian)
                 .WithRequired(e => e.Petugas)
                 .WillCascadeOnDelete(false);
         }

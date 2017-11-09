@@ -5,14 +5,21 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Tambah Anggota</h4>
+        <h4>AnggotaViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+            @Html.LabelFor(model => model.KodePetugas, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KodePetugas, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KodePetugas, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.KodeAnggota, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.KodeAnggota, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.DropDownListFor(model => model.KodeAnggota, (IEnumerable<SelectListItem>)ViewBag.PendaftaranList, "Select Pendaftaran", new { @class = "form-control" })
+                @Html.EditorFor(model => model.KodeAnggota, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.KodeAnggota, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,40 +57,45 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.CreatedBy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreatedBy, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CreatedBy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Created, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Created, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Created, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ModifiedBy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifiedBy, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ModifiedBy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Modified, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Modified, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Modified, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="button" value="Create" class="btn btn-success btn-create-conf" />
-                <input type="button" value="Cancel" class="btn btn-default" data-dismiss="modal" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-    @Scripts.Render("~/bundles/jqueryval")
-
-<script type="text/javascript">
-    $(".btn-create-conf").click(function () {
-        var item = {
-            Id: 0,
-            KodeAnggota: $("#KodeAnggota").val(),
-            Nama: $("#Nama").val(),
-            Alamat: $("#Alamat").val(),
-            Email: $("#Email").val(),
-            Telepon: $("#Telepon").val()
-            //IsActived: $("#IsActived").is(":checked")
-        };
-        //alert(JSON.stringify(item));
-        $.ajax({
-            url: '@Url.Action("Create", "Anggota")',
-            type: 'post',
-            data: { model: item },
-            success: function (result) {
-                if (result.success) {
-                    $("#modal-form").modal("hide");
-                    ShowList();
-                } else {
-                    alert('Error: ' + result.message);
-                }
-            }
-        });
-    });
-</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -20,10 +20,9 @@ namespace PerpustakaanDataAccess
                           select new PemasokViewModel
                           {
                               Id = pms.Id,
-                              KodePemasok = pms.KodePemasok,
-                              KodePembelian = pms.KodePembelian,
                               KodePenerbit = pms.KodePenerbit,
-                              NamaPenerbit = pms.NamaPenerbit,
+                              KodePemasok = pms.KodePemasok,
+                              NamaPemasok = pms.NamaPemasok,
                               AlamatPemasok = pms.AlamatPemasok,
                               Telepon = pms.Telepon
                           }).ToList();
@@ -41,27 +40,25 @@ namespace PerpustakaanDataAccess
                     if (model.Id == 0)
                     {
                         Pemasok pms = new Pemasok();
-                        pms.Id = model.Id;
-                        pms.KodePemasok = model.KodePemasok;
-                        pms.KodePembelian = model.KodePembelian;
-                        pms.KodePenerbit = model.KodePenerbit;
-                        pms.NamaPenerbit = model.NamaPenerbit;
-                        pms.AlamatPemasok = model.AlamatPemasok;
-                        pms.Telepon = model.Telepon;
-                        pms.CreatedBy = "Admin";
-                        pms.Created = DateTime.Now;
-                        db.Pemasok.Add(pms);
-                        db.SaveChanges();
+                           pms.Id = model.Id;
+                           pms.KodePenerbit=model.KodePenerbit;
+                           pms.KodePemasok=model.KodePemasok;
+                           pms.NamaPemasok=model.NamaPemasok;
+                           pms.AlamatPemasok=model.AlamatPemasok;
+                           pms.Telepon=model.Telepon;
+                           pms.CreatedBy = "Admin";
+                           pms.Created = DateTime.Now;
+                           db.Pemasok.Add(pms);
+                           db.SaveChanges();
                     }
                     else
                     {
                         Pemasok pms = db.Pemasok.Where(o => o.Id == model.Id).FirstOrDefault();
                         if (pms != null)
                         {
-                            pms.KodePemasok = model.KodePemasok;
-                            pms.KodePembelian = model.KodePembelian;
                             pms.KodePenerbit = model.KodePenerbit;
-                            pms.NamaPenerbit = model.NamaPenerbit;
+                            pms.KodePemasok = model.KodePemasok;
+                            pms.NamaPemasok = model.NamaPemasok;
                             pms.AlamatPemasok = model.AlamatPemasok;
                             pms.Telepon = model.Telepon;
                             pms.ModifiedBy = "Admin";
@@ -89,10 +86,9 @@ namespace PerpustakaanDataAccess
                           select new PemasokViewModel
                           {
                               Id = pms.Id,
-                              KodePemasok = pms.KodePemasok,
-                              KodePembelian = pms.KodePembelian,
                               KodePenerbit = pms.KodePenerbit,
-                              NamaPenerbit = pms.NamaPenerbit,
+                              KodePemasok = pms.KodePemasok,
+                              NamaPemasok = pms.NamaPemasok,
                               AlamatPemasok = pms.AlamatPemasok,
                               Telepon = pms.Telepon
                           }).FirstOrDefault();

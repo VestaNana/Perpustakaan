@@ -9,14 +9,12 @@ namespace PerpustakaanDataModel
     [Table("Anggota")]
     public partial class Anggota
     {
-        public Anggota()
-        {
-            Peminjaman = new HashSet<Peminjaman>();
-            Pengembalian = new HashSet<Pengembalian>();
-        }
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string KodePetugas { get; set; }
 
         [Key]
         [StringLength(10)]
@@ -48,10 +46,6 @@ namespace PerpustakaanDataModel
 
         public DateTime? Modified { get; set; }
 
-        public virtual Pendaftaran Pendaftaran { get; set; }
-
-        public virtual ICollection<Peminjaman> Peminjaman { get; set; }
-
-        public virtual ICollection<Pengembalian> Pengembalian { get; set; }
+        public virtual Petugas Petugas { get; set; }
     }
 }

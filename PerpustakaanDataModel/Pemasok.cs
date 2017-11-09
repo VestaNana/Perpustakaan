@@ -17,21 +17,17 @@ namespace PerpustakaanDataModel
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string KodePenerbit { get; set; }
+
         [Key]
         [StringLength(20)]
         public string KodePemasok { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string KodePembelian { get; set; }
-
-        [Required]
-        [StringLength(20)]
-        public string KodePenerbit { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string NamaPenerbit { get; set; }
+        public string NamaPemasok { get; set; }
 
         [Required]
         [StringLength(500)]

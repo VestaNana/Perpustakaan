@@ -11,6 +11,7 @@ namespace PerpustakaanDataModel
     {
         public Buku()
         {
+            DetailDonasiBuku = new HashSet<DetailDonasiBuku>();
             DetailPembelian = new HashSet<DetailPembelian>();
             DetailPeminjaman = new HashSet<DetailPeminjaman>();
             Pengembalian = new HashSet<Pengembalian>();
@@ -54,6 +55,8 @@ namespace PerpustakaanDataModel
         public DateTime? Modified { get; set; }
 
         public virtual Penerbit Penerbit { get; set; }
+
+        public virtual ICollection<DetailDonasiBuku> DetailDonasiBuku { get; set; }
 
         public virtual ICollection<DetailPembelian> DetailPembelian { get; set; }
 

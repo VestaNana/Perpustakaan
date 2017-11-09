@@ -29,10 +29,8 @@ namespace PerpustakaanDataModel
         public string KodeBuku { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string JudulBuku { get; set; }
-
-        public DateTime TglKembali { get; set; }
+        [StringLength(10)]
+        public string TglPengembalian { get; set; }
 
         [Column(TypeName = "money")]
         public decimal Denda { get; set; }
@@ -47,10 +45,8 @@ namespace PerpustakaanDataModel
 
         public DateTime? Modified { get; set; }
 
-        public virtual Anggota Anggota { get; set; }
-
         public virtual Buku Buku { get; set; }
 
-        public virtual Petugas Petugas { get; set; }
+        public virtual DetailPengembalian DetailPengembalian { get; set; }
     }
 }

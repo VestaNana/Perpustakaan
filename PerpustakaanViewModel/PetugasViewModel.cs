@@ -11,11 +11,9 @@ namespace PerpustakaanViewModel
     public class PetugasViewModel
     {
         public int Id { get; set; }
-        [DisplayName("Kode Petugas")]
+
         public string KodePetugas { get; set; }
 
-        [Required]
-        [DisplayName("Nama Petugas")]
         public string Nama { get; set; }
 
         public string CreatedBy { get; set; }

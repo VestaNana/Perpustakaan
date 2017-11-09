@@ -39,8 +39,6 @@ namespace PerpustakaanDataModel
 
         public DateTime? Modified { get; set; }
 
-        public virtual Anggota Anggota { get; set; }
-
         public virtual ICollection<DetailPeminjaman> DetailPeminjaman { get; set; }
 
         public virtual Petugas Petugas { get; set; }

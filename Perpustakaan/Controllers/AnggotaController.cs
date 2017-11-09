@@ -25,7 +25,7 @@ namespace Perpustakaan.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.PendaftaranList = new SelectList(PendaftaranDataAccess.GetAll(), "KodeAnggota", "KodeAnggota");
+            //ViewBag.PendaftaranList = new SelectList(PendaftaranDataAccess.GetAll(), "KodeAnggota", "KodeAnggota");
             return View();
         }
 
@@ -36,7 +36,7 @@ namespace Perpustakaan.Controllers
         }
         public ActionResult Edit(int id)
         {
-            ViewBag.PendaftaranList = new SelectList(PendaftaranDataAccess.GetAll(), "KodeAnggota", "KodeAnggota");
+            //ViewBag.PendaftaranList = new SelectList(PendaftaranDataAccess.GetAll(), "KodeAnggota", "KodeAnggota");
             return View(AnggotaDataAccess.GetById(id));
         }
 

@@ -26,10 +26,6 @@ namespace PerpustakaanDataModel
         public string NamaPenerbit { get; set; }
 
         [Required]
-        [StringLength(30)]
-        public string NamaPengarang { get; set; }
-
-        [Required]
         [StringLength(500)]
         public string AlamatPenerbit { get; set; }
 

@@ -19,19 +19,11 @@ namespace PerpustakaanDataModel
         [StringLength(10)]
         public string KodeBuku { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string Nama { get; set; }
+        public DateTime TglPinjam { get; set; }
 
-        public DateTime TglKembali { get; set; }
+        public DateTime InfoPengembalian { get; set; }
 
-        [Required]
-        [StringLength(20)]
-        public string StatusKembali { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string JudulBuku { get; set; }
+        public int JumlahBuku { get; set; }
 
         [StringLength(50)]
         public string CreatedBy { get; set; }

@@ -52,13 +52,14 @@
   <ItemGroup>
     <Compile Include="Anggota.cs" />
     <Compile Include="Buku.cs" />
+    <Compile Include="DetailDonasiBuku.cs" />
     <Compile Include="DetailPembelian.cs" />
     <Compile Include="DetailPeminjaman.cs" />
+    <Compile Include="DetailPengembalian.cs" />
     <Compile Include="DonasiBuku.cs" />
     <Compile Include="Pemasok.cs" />
     <Compile Include="Pembelian.cs" />
     <Compile Include="Peminjaman.cs" />
-    <Compile Include="Pendaftaran.cs" />
     <Compile Include="Penerbit.cs" />
     <Compile Include="Pengembalian.cs" />
     <Compile Include="PerpusContext.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

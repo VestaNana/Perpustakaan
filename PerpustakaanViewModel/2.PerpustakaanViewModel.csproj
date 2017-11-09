@@ -43,7 +43,6 @@
     <Compile Include="AnggotaViewModel.cs" />
     <Compile Include="BukuViewModel.cs" />
     <Compile Include="PemasokViewModel.cs" />
-    <Compile Include="PendaftaranViewModel.cs" />
     <Compile Include="PenerbitViewModel.cs" />
     <Compile Include="PetugasViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
