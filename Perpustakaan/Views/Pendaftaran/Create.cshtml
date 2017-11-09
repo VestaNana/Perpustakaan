@@ -63,7 +63,7 @@
             TglPembuatan: $("#TglPembuatan").val(),
             TglExpired: $("#TglExpired").val()
         };
-        alert(JSON.stringify(item));
+        //alert(JSON.stringify(item));
         $.ajax({
             url: '@Url.Action("Create", "Pendaftaran")',
             type: 'post',

@@ -13,3 +13,8 @@ F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewM
 F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
 F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
 F:\PerpustakaanMP\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.pdb
+D:\Mini-Proyek\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
+D:\Mini-Proyek\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
+D:\Mini-Proyek\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb
