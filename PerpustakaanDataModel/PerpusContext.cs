@@ -24,7 +24,6 @@ namespace PerpustakaanDataModel
         public virtual DbSet<Penerbit> Penerbit { get; set; }
         public virtual DbSet<Pengembalian> Pengembalian { get; set; }
         public virtual DbSet<Petugas> Petugas { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -144,10 +143,6 @@ namespace PerpustakaanDataModel
 
             modelBuilder.Entity<DetailPeminjaman>()
                 .Property(e => e.Nama)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DetailPeminjaman>()
-                .Property(e => e.StatusKembali)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DetailPeminjaman>()

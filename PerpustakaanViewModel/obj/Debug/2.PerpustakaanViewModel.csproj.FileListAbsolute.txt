@@ -3,3 +3,8 @@ c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanVie
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\bin\Debug\PerpustakaanViewModel.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\2.PerpustakaanViewModel.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanViewModel\obj\Debug\PerpustakaanViewModel.pdb

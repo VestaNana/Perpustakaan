@@ -1,0 +1,86 @@
+﻿@model IEnumerable<PerpustakaanViewModel.PemasokViewModel>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KodePemasok)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KodePembelian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KodePenerbit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamaPenerbit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlamatPemasok)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telepon)
+        </th>
+        <th></th>
+    </tr>
+        </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KodePemasok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KodePembelian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KodePenerbit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamaPenerbit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlamatPemasok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telepon)
+        </td>
+        <td>
+            <input type="button" value="Edit" class="btn btn-warning btn-edit" data-id="@item.Id">
+            <input type="button" value="Delete" class="btn btn-danger btn-delete" data-id="@item.Id">
+        </td>
+    </tr>
+}
+        </tbody>
+</table>
+
+<script type="text/javascript">
+    $(".btn-edit").click(function () {
+        //alert('Id-nya adalah :' + $(this).attr("data-id"));
+        $.ajax({
+            url: '@Url.Action("Edit", "Pemasok")',
+            type :'get',
+            data : {id:$(this).attr("data-id")},
+            success: function (result){
+                $(".modal-body").html(result);
+                $("#modal-form").modal("show");
+            }
+
+        });
+    });
+
+    $(".btn-delete").click(function () {
+        //alert('Id-nya adalah :' + $(this).attr("data-id"));
+        $.ajax({
+            url: '@Url.Action("Delete", "Pemasok")',
+            type: 'get',
+            data: { id: $(this).attr("data-id") },
+            success: function (result) {
+                $(".modal-body").html(result);
+                $("#modal-form").modal("show");
+            }
+
+        });
+    });
+</script>

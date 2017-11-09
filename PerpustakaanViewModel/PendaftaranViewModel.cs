@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PerpusViewModel
+namespace PerpustakaanViewModel
 {
     public class PendaftaranViewModel
     {
@@ -13,14 +15,10 @@ namespace PerpusViewModel
         public string KodeKartu { get; set; }
 
         public string KodePetugas { get; set; }
-
-        public string KodeAnggota { get; set; }
-
+        [DisplayFormat(DataFormatString = "{0: dd MMMM yyyy}", ApplyFormatInEditMode = true)]
         public DateTime TglPembuatan { get; set; }
-
+        [DisplayFormat(DataFormatString = "{0: dd MMMM yyyy}", ApplyFormatInEditMode = true)]
         public DateTime TglExpired { get; set; }
-
-        public bool StatusKembali { get; set; }
 
         public string CreatedBy { get; set; }
 

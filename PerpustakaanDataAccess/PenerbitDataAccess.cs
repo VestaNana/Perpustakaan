@@ -1,14 +1,14 @@
 ﻿using PerpustakaanDataModel;
-using PerpusViewModel;
+using PerpustakaanViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PerpusDataAccess
+namespace PerpustakaanDataAccess
 {
-    class PenerbitDataAccess
+    public class PenerbitDataAccess
     {
         public static string Message = string.Empty;
 
@@ -24,47 +24,47 @@ namespace PerpusDataAccess
                               KodePenerbit = pnb.KodePenerbit,
                               NamaPenerbit = pnb.NamaPenerbit,
                               NamaPengarang = pnb.NamaPengarang,
-                              AlamatPenerbit = pnb.AlamatPenerbit    
+                              AlamatPenerbit = pnb.AlamatPenerbit,
+                              Telepon= pnb.Telepon
                           }).ToList();
             }
             return result;
         }
-       
-        public static bool Update(PenerbitViewModel mod)
+
+        public static bool Update(PenerbitViewModel model)
         {
             bool result = true;
             try
             {
-                using(var db = new PerpusContext())
+                using (var db = new PerpusContext())
                 {
-                    if (mod.Id==0)
-	                {
+                    if (model.Id == 0)
+                    {
                         Penerbit pnb = new Penerbit();
-                        pnb.Id = mod.Id;
-                        pnb.KodePenerbit=mod.KodePenerbit;
-                        pnb.NamaPenerbit=mod.NamaPenerbit;
-                        pnb.NamaPengarang=mod.NamaPengarang;
-                        pnb.AlamatPenerbit=mod.AlamatPenerbit;
-                        pnb.Telepon=mod.Telepon;
-                        //pnb.CreatedBy="Admin";
-                        //pnb.Created=DateTime.Now;
+                        pnb.Id = model.Id;
+                        pnb.KodePenerbit = model.KodePenerbit;
+                        pnb.NamaPenerbit = model.NamaPenerbit;
+                        pnb.NamaPengarang = model.NamaPengarang;
+                        pnb.AlamatPenerbit = model.AlamatPenerbit;
+                        pnb.Telepon = model.Telepon;
+                        pnb.CreatedBy = "Admin";
+                        pnb.Created = DateTime.Now;
                         db.Penerbit.Add(pnb);
                         db.SaveChanges();
-	                }
+                    }
                     else
                     {
-                        Penerbit pnb = db.Penerbit.Where(o => o.Id == mod.Id).FirstOrDefault();
+                        Penerbit pnb = db.Penerbit.Where(o => o.Id == model.Id).FirstOrDefault();
                         if (pnb != null)
                         {
-                            pnb.Id = mod.Id;
-                        pnb.KodePenerbit=mod.KodePenerbit;
-                        pnb.NamaPenerbit=mod.NamaPenerbit;
-                        pnb.NamaPengarang=mod.NamaPengarang;
-                        pnb.AlamatPenerbit=mod.AlamatPenerbit;
-                        pnb.Telepon=mod.Telepon;
-                        //pnb.ModifiedBy="Admin";
-                        //pnb.Modified = DateTime.Now;
-                        db.SaveChanges();
+                            pnb.KodePenerbit = model.KodePenerbit;
+                            pnb.NamaPenerbit = model.NamaPenerbit;
+                            pnb.NamaPengarang = model.NamaPengarang;
+                            pnb.AlamatPenerbit = model.AlamatPenerbit;
+                            pnb.Telepon = model.Telepon;
+                            pnb.ModifiedBy = "Admin";
+                            pnb.Modified = DateTime.Now;
+                            db.SaveChanges();
                         }
                     }
                 }
@@ -80,41 +80,44 @@ namespace PerpusDataAccess
         public static PenerbitViewModel GetById(int id)
         {
             PenerbitViewModel result = new PenerbitViewModel();
-            using(var db = new PerpusContext())
+            using (var db = new PerpusContext())
             {
                 result = (from pnb in db.Penerbit
+                          where pnb.Id==id
                           select new PenerbitViewModel
                         {
                             Id = pnb.Id,
                             KodePenerbit = pnb.KodePenerbit,
                             NamaPenerbit = pnb.NamaPenerbit,
                             NamaPengarang = pnb.NamaPengarang,
-                            AlamatPenerbit = pnb.AlamatPenerbit
+                            AlamatPenerbit = pnb.AlamatPenerbit,
+                            Telepon=pnb.Telepon
                         }).FirstOrDefault();
             }
             return result;
         }
 
-        //public bool Delete(int id)
-        //{
-        //    bool result = true;
-        //    try
-        //    {
-        //        using (var db = new PerpusContext())
-        //        {
-        //            Penerbit pnb = db.Penerbit.Where(o => o.Id == id).FirstOrDefault();
-        //            if (pnb != null)
-        //            {
-        //                db.Penerbit.Remove(pnb);
-        //                db.SaveChanges();
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Message = ex.Message;
-        //        result = false;
-        //    }
-        //}
+        public static bool Delete(int id)
+        {
+            bool result = true;
+            try
+            {
+                using (var db = new PerpusContext())
+                {
+                    Penerbit pnb = db.Penerbit.Where(o => o.Id == id).FirstOrDefault();
+                    if (pnb != null)
+                    {
+                        db.Penerbit.Remove(pnb);
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+                result = false;
+            }
+            return result;
+        }
     }
 }

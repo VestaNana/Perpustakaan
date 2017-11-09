@@ -47,11 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnggotaDataAccess.cs" />
-    <Compile Include="BukuDataAccess.cs" />
     <Compile Include="PemasokDataAccess.cs" />
     <Compile Include="PendaftaranDataAccess.cs" />
     <Compile Include="PenerbitDataAccess.cs" />
-    <Compile Include="PetugasDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PerpustakaanDataModel\1.PerpustakaanDataModel.csproj">
-      <Project>{62f9c54c-04ed-4da9-a2bf-a323f7363340}</Project>
+      <Project>{3d79afe9-b8a2-43da-b0f5-9bd76302c525}</Project>
       <Name>1.PerpustakaanDataModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\PerpustakaanViewModel\2.PerpustakaanViewModel.csproj">

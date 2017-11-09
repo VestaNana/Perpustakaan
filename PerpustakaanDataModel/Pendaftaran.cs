@@ -24,8 +24,6 @@ namespace PerpustakaanDataModel
 
         public DateTime TglExpired { get; set; }
 
-        public bool StatusKembali { get; set; }
-
         [StringLength(50)]
         public string CreatedBy { get; set; }
 

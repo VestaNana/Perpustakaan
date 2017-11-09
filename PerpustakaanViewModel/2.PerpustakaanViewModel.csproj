@@ -42,13 +42,9 @@
   <ItemGroup>
     <Compile Include="AnggotaViewModel.cs" />
     <Compile Include="BukuViewModel.cs" />
-    <Compile Include="DetailPembelianViewModel.cs" />
-    <Compile Include="DonasiBukuViewModel.cs" />
     <Compile Include="PemasokViewModel.cs" />
-    <Compile Include="PembelianViewModel.cs" />
     <Compile Include="PendaftaranViewModel.cs" />
     <Compile Include="PenerbitViewModel.cs" />
-    <Compile Include="PetugasViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

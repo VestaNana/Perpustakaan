@@ -12,3 +12,17 @@ c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDat
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
 c:\users\asus\documents\visual studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\3.PerpustakaanDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll.config
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataAccess.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanDataModel.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\PerpustakaanViewModel.pdb
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.dll
+C:\Users\lenovo\Documents\Visual Studio 2013\Projects\Perpustakaan\PerpustakaanDataAccess\obj\Debug\PerpustakaanDataAccess.pdb

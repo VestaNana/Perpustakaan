@@ -1,17 +1,16 @@
-﻿using PerpustakaanDataModel;
-using PerpusViewModel;
+﻿using PerpustakaanViewModel;
+using PerpustakaanDataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PerpusDataAccess
+namespace PerpustakaanDataAccess
 {
     public class PemasokDataAccess
     {
         public static string Message = string.Empty;
-
         public static List<PemasokViewModel> GetAll()
         {
             List<PemasokViewModel> result = new List<PemasokViewModel>();
@@ -20,54 +19,53 @@ namespace PerpusDataAccess
                 result = (from pms in db.Pemasok
                           select new PemasokViewModel
                           {
-                                Id = pms.Id,
-                                KodePemasok=pms.KodePemasok,
-                                KodePembelian=pms.KodePembelian,
-                                KodePenerbit=pms.KodePenerbit,
-                                NamaPenerbit=pms.NamaPenerbit,
-                                AlamatPemasok=pms.AlamatPemasok,
-                                Telepon=pms.Telepon
+                              Id = pms.Id,
+                              KodePemasok = pms.KodePemasok,
+                              KodePembelian = pms.KodePembelian,
+                              KodePenerbit = pms.KodePenerbit,
+                              NamaPenerbit = pms.NamaPenerbit,
+                              AlamatPemasok = pms.AlamatPemasok,
+                              Telepon = pms.Telepon
                           }).ToList();
             }
             return result;
         }
 
-        public static bool Update(PemasokViewModel mod)
+        public static bool Update(PemasokViewModel model)
         {
             bool result = true;
             try
             {
                 using (var db = new PerpusContext())
                 {
-                    if (mod.Id == 0)
+                    if (model.Id == 0)
                     {
                         Pemasok pms = new Pemasok();
-                            pms.Id=mod.Id;
-                            pms.KodePemasok=mod.KodePemasok;
-                            pms.KodePembelian=mod.KodePembelian;
-                            pms.KodePenerbit=mod.KodePenerbit;
-                            pms.NamaPenerbit=mod.NamaPenerbit;
-                            pms.AlamatPemasok=mod.AlamatPemasok;
-                            pms.Telepon=mod.Telepon;
-                            //pms.CreatedBy="Admin";
-                            //pms.Created=DateTime.Now;
+                        pms.Id = model.Id;
+                        pms.KodePemasok = model.KodePemasok;
+                        pms.KodePembelian = model.KodePembelian;
+                        pms.KodePenerbit = model.KodePenerbit;
+                        pms.NamaPenerbit = model.NamaPenerbit;
+                        pms.AlamatPemasok = model.AlamatPemasok;
+                        pms.Telepon = model.Telepon;
+                        pms.CreatedBy = "Admin";
+                        pms.Created = DateTime.Now;
                         db.Pemasok.Add(pms);
                         db.SaveChanges();
                     }
                     else
                     {
-                        Pemasok pms = db.Pemasok.Where(o => o.Id == mod.Id).FirstOrDefault();
+                        Pemasok pms = db.Pemasok.Where(o => o.Id == model.Id).FirstOrDefault();
                         if (pms != null)
                         {
-                            pms.Id = mod.Id;
-                            pms.KodePemasok = mod.KodePemasok;
-                            pms.KodePembelian = mod.KodePembelian;
-                            pms.KodePenerbit = mod.KodePenerbit;
-                            pms.NamaPenerbit = mod.NamaPenerbit;
-                            pms.AlamatPemasok = mod.AlamatPemasok;
-                            pms.Telepon = mod.Telepon;
-                            //pms.ModifiedBy = "Admin";
-                            //pms.Modified = DateTime.Now;
+                            pms.KodePemasok = model.KodePemasok;
+                            pms.KodePembelian = model.KodePembelian;
+                            pms.KodePenerbit = model.KodePenerbit;
+                            pms.NamaPenerbit = model.NamaPenerbit;
+                            pms.AlamatPemasok = model.AlamatPemasok;
+                            pms.Telepon = model.Telepon;
+                            pms.ModifiedBy = "Admin";
+                            pms.Modified = DateTime.Now;
                             db.SaveChanges();
                         }
                     }
@@ -87,6 +85,7 @@ namespace PerpusDataAccess
             using (var db = new PerpusContext())
             {
                 result = (from pms in db.Pemasok
+                          where pms.Id==id
                           select new PemasokViewModel
                           {
                               Id = pms.Id,
@@ -101,26 +100,27 @@ namespace PerpusDataAccess
             return result;
         }
 
-        //public bool Delete(int id)
-        //{
-        //    bool result = true;
-        //    try
-        //    {
-        //        using (var db = new PerpusContext())
-        //        {
-        //            Pemasok pms = db.Pemasok.Where(o => o.Id == id).FirstOrDefault();
-        //            if (pms != null)
-        //            {
-        //                db.Pemasok.Remove(pms);
-        //                db.SaveChanges();
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Message = ex.Message;
-        //        result = false;
-        //    }
-        //}
+        public static bool Delete(int id)
+        {
+            bool result = true;
+            try
+            {
+                using (var db = new PerpusContext())
+                {
+                    Pemasok pms = db.Pemasok.Where(o => o.Id == id).FirstOrDefault();
+                    if (pms != null)
+                    {
+                        db.Pemasok.Remove(pms);
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+                result = false;
+            }
+            return result;
+        }
     }
 }
