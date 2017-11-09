@@ -24,7 +24,7 @@ namespace PerpustakaanDataAccess
                               KodeKartu = pdf.KodeKartu,
                               KodePetugas = pdf.KodePetugas,
                               TglPembuatan = pdf.TglPembuatan,
-                              TglExpired = pdf.TglExpired,
+                              TglExpired = pdf.TglExpired
                           }).ToList();
             }
             return result;
@@ -87,7 +87,7 @@ namespace PerpustakaanDataAccess
                             KodeKartu = pdf.KodeKartu,
                             KodePetugas = pdf.KodePetugas,
                             TglPembuatan = pdf.TglPembuatan,
-                            TglExpired = pdf.TglExpired,
+                            TglExpired = pdf.TglExpired
                         }).FirstOrDefault();
             }
             return result;
